@@ -1,6 +1,6 @@
 ---
 import GBSessionLaeuft from '../components/greybox/GBSessionLaeuft.astro';
-
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
 const min = Number(Astro.url.searchParams.get('min') ?? 5);
 const sek = Number(Astro.url.searchParams.get('sek') ?? 30);
 ---
@@ -18,8 +18,8 @@ const sek = Number(Astro.url.searchParams.get('sek') ?? 30);
     <GBSessionLaeuft
       initialMinutes={min}
       initialSeconds={sek}
-      abbrechenHref="/"
-      nextHref="/session-ende"
+      abbrechenHref={`${b}/`}
+      nextHref={`${b}/session-ende`}
     />
   </body>
 </html>

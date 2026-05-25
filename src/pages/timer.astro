@@ -1,5 +1,6 @@
 ---
 import GBTimerSetzen from '../components/greybox/GBTimerSetzen.astro';
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <html lang="de">
@@ -12,6 +13,6 @@ import GBTimerSetzen from '../components/greybox/GBTimerSetzen.astro';
     <title>Greybox – Timer stellen</title>
   </head>
   <body class="m-0 p-0">
-    <GBTimerSetzen defaultMinutes={5} defaultSeconds={30} nextHref="/session" />
+    <GBTimerSetzen defaultMinutes={5} defaultSeconds={30} nextHref={`${b}/session`} />
   </body>
 </html>

@@ -1,5 +1,6 @@
 ---
 import GBStartScreen from '../components/greybox/GBStartScreen.astro';
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <html lang="de">
@@ -12,6 +13,6 @@ import GBStartScreen from '../components/greybox/GBStartScreen.astro';
     <title>Greybox</title>
   </head>
   <body class="bg-(--gb-background) m-0 p-0">
-    <GBStartScreen href="/auswahl" />
+    <GBStartScreen href={`${b}/auswahl`} />
   </body>
 </html>
